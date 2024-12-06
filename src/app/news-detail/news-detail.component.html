@@ -1,0 +1,26 @@
+<div *ngIf="newsData; else loading">
+    <div *ngFor="let article of newsData.articles">
+      <div class="news-item">
+        <h2>{{ article.title }}</h2>
+    
+        <div class="news-item-content">
+          <p class="news-description" [innerHTML]="sanitizedDescription"></p>
+    
+          <a [href]="article.url" target="_blank" class="read-more-btn">Read More</a>
+    
+          <div *ngIf="article.urlToImage">
+            <img class="news-image" [src]="article.urlToImage" alt="{{ article.title }}" />
+          </div>
+    
+          <div *ngIf="!article.urlToImage">
+            <img class="news-image" src="assets/default-image.jpg" alt="No image available" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <p>Loading news...</p>
+  </ng-template>
+  

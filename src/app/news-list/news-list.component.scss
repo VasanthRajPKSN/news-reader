@@ -1,0 +1,21 @@
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .categories button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .categories button:hover {
+    background-color: #0056b3;
+  }
