@@ -15,7 +15,7 @@ export class NewsDetailComponent {
 
   constructor(private sanitizer: DomSanitizer) {}
 
-  ngOnChanges() {
+  ngOnChanges() { 
     if (this.newsData) {
       this.sanitizedDescription = this.sanitizer.bypassSecurityTrustHtml(this.newsData.articles[0]?.description || ''); 
     }
